@@ -1,0 +1,634 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', Helvetica, Arial, Sans-serif;
+    color: #333333;
+}
+
+h1 {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.3em;
+    color: #333333;
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+.highlight {
+    border-bottom: 4px solid #f47676;
+}
+
+.subtitle {
+    font-family: "PT Serif", serif;
+    font-style: italic;
+    font-size: 13.5px;
+}
+
+h2 {
+    font-family: "PT", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1;
+    color: #333333;
+}
+
+h3 {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-style: bold;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.1;
+    color: #333333;
+}
+
+p {
+    font-size: 13px;
+}
+
+a {
+    color: #2f8fce;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input[type="checkbox" i]{
+    background-color: #ff00ff;
+}
+
+#map-graphic{
+    visibility: hidden;
+}
+
+h3#mobile-message{
+    visibility: hidden;
+}
+
+.mapboxgl-popup {
+    max-width: 300px;
+}
+
+.mapboxgl-popup h3 {
+    margin-top: 0;
+    margin-bottom: 0.2em;
+}
+
+.mapboxgl-popup h4 {
+    font-size: 14px;
+    margin: 5px 0px;
+    }
+
+.mapboxgl-popup p {
+    margin-bottom: 0.2em;
+    margin-top: 0.3em;
+}
+
+.mapboxgl-popup-content {
+    font-family: 'PT Sans', sans-serif;
+    padding: 15px;
+}
+
+.blurb {
+    font-family: "PT Serif", serif;
+    font-size: 13.5px;
+    margin-top: 0.1em !important;
+    margin-bottom: 0.7em !important;
+}
+
+.citation {
+    font-size: 12px;
+    line-height: normal;
+}
+
+.mapboxgl-popup i {
+    margin: 3px;
+    font-size: 14px;
+}
+
+.popup-icon {
+    width: 14px;
+    height: 14px;
+    vertical-align: text-bottom;
+}
+
+#map {
+    position: relative;
+    width: 100%;
+    height: 800px;
+}
+
+#console {
+    position: absolute;
+    width: 350px;
+    margin: 10px;
+    padding: 10px 20px;
+    padding-right: 35px;
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 5px;
+    z-index: 5;
+}
+
+.session {
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.last {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.column {
+    flex: 50%;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+#studies {
+    font-weight: 700;
+}
+
+/*.marker {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* styling for drought icon */
+.marker-icon {
+    width: 17px;
+    height: 17px;
+    vertical-align: text-top;
+    margin-top: 3.5px;
+}
+
+.rapid .marker-icon {
+    margin-top: 0.9em;
+    margin-left: -.7em;
+}
+
+.trend .marker-icon {
+    margin-top: -.2em;
+    margin-left: 0.5em;
+}
+
+.rapid i.far.fa-snowflake {
+    margin-left: -0.4em;
+}
+
+.tooltip.marker.formal {
+    margin-right: 5px;
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+}
+
+.tooltip.marker.rapid {
+    margin-right: 5px;
+    border-width: 0 6px 12px 6px;
+    display: inline-block;
+}
+
+.tooltip.marker.trend {
+    background-image: url(../img/hexagon.svg);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+    margin-right: 4px;
+    background-color: white !important;
+}
+
+.key-icon {
+    margin-top: 1px;
+    width: 12px;
+    height: 12px;
+    vertical-align: text-top;
+}
+
+.marker.female {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    background-color: rgba(244, 164, 103, 0.9);
+}
+
+.marker.male {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    background-color: rgba(142, 107, 209, 0.9);
+}
+
+.marker.nodifference {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    background-color: rgba(153, 153, 153, 0.9);
+}
+
+.marker.female i {
+    color: white;             
+    margin-top: 7px;
+    font-size: 15px;
+}
+
+.marker.male i {
+    color: white;             
+    margin-top: 7px;
+    font-size: 15px;
+}
+
+.marker.nodifference i {
+    color: white;             
+    margin-top: 7px;
+    font-size: 15px;
+}
+
+.marker.rapid {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 17.5px 36.3px 17.5px;
+    cursor: pointer;
+    text-align: center;
+    border-color: transparent;
+    /*border-left: 15px solid transparent;
+    border-right: 15px solid transparent;*/
+}
+
+.marker.rapid-icon {
+    width: 17px;
+    height: 17px;
+    vertical-align: text-top;
+    margin-top: .7em;
+    font-size: 15px;
+    margin-left: -0.55em;
+}
+
+
+.marker.rapid i {
+    color: white;
+    margin-top: 1em;
+    font-size: 15px;
+    margin-left: -0.25em;
+
+}
+
+.marker.trend {
+    width: 30px;
+    height: 18px;
+}
+
+.marker.trend:before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+    }
+.marker.trend:after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+    }
+
+
+.marker.trend.human:before{
+    border-bottom: 8px solid rgba(244, 118, 118, 0.9);
+}
+.marker.trend.natural:before{
+    border-bottom: 8px solid rgba(98, 184, 221, 0.9);
+}
+.marker.trend.unsure:before{
+    border-bottom: 8px solid rgba(153, 153, 153, 0.9);
+}
+
+.marker.trend.human:after{
+    border-top: 8px solid rgba(244, 118, 118, 0.9);
+}
+.marker.trend.natural:after{
+    border-top: 8px solid rgba(98, 184, 221, 0.9);
+}
+.marker.trend.unsure:after{
+    border-top: 8px solid rgba(153, 153, 153, 0.9);
+}
+
+.tooltip.marker.trend:before,.tooltip.marker.trend:after{
+    border-top:0;
+    border-bottom:0;
+}
+
+
+.marker-trend-icon {
+    width: 17px;
+    height: 17px;
+    vertical-align: text-top;
+    margin-top: -.23em;
+    font-size: 15px;
+    margin-left: 0.433em;
+}
+
+
+.marker.trend i {
+    color: white;
+    /*margin-top: 1em;*/
+    font-size: 15px;
+    margin-left: 0.75em;
+
+}
+
+.marker.trend i.fas.fa-cloud{
+    margin-left:0.4em;
+    }
+
+i.far.fa-snowflake.rapid-snow{
+    margin-left: -0.45em;
+}
+
+.marker.rapid.human {
+    background-color: transparent;
+    border-bottom-color: rgba(244, 118, 118, 0.9);
+}
+
+.marker.rapid.natural {
+    background-color: transparent;
+    border-bottom-color: rgba(98, 184, 221, 0.9);
+}
+
+.marker.rapid.unsure {
+    background-color: transparent;
+    border-bottom-color: rgba(153, 153, 153, 0.9);
+}
+
+.marker.trend.human {
+    background-color: rgba(244, 118, 118, 0.9);
+}
+
+.marker.trend.natural {
+    background-color: rgba(98, 184, 221, 0.9);
+}
+
+.marker.trend.unsure {
+    background-color: rgba(153, 153, 153, 0.9);
+}
+
+/* style the key  */
+
+.colour-key {
+    width: 12px;
+    height: 12px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-right: 3px;
+    vertical-align: -10%;
+}
+
+.rapid-key{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 6px 12px 6px;
+    border-color: transparent transparent #333333 transparent;
+    display: inline-block;
+    margin-right: 3px;
+    vertical-align: -8%;
+}
+
+/*.trend-key{
+    width: 12px;
+    height: 8px;
+    background-color:#333333;
+    display: inline-block;
+    margin-right: 3px;
+    vertical-align: -10%;
+}
+.trend-key:before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 8px solid #333333;
+    }
+.trend-key:after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 8px solid #333333;
+    }*/
+
+ul {
+    list-style-type: none;
+}
+
+.list-group {
+    padding: 0px;
+}
+
+.impacts {
+    display: inline-block;
+}
+
+.controls {
+    margin-top: 0.5em;
+}
+
+.controls button {
+    float: left;
+    margin-right: 0.7em;
+}
+
+button {
+    display: inline-block;
+    border: none;
+    padding: 2px 5px;
+    border-radius: 8px;
+    margin: 0;
+    text-decoration: none;
+    background: #7e7e7e;
+    color: #ffffff;
+    font-family: PT Sans;
+    font-size: 12.5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+    background: #333333;
+    outline:0;
+}
+
+li {
+    font-size: 12.5px;
+    float: left;
+    margin-right: 0.7em;
+    margin-bottom: 0.5em;
+    background-color: #e7e7e7;
+    border-radius: 8px;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
+.list-group-item:hover {
+    opacity: 0.6;
+}
+
+.unselected {
+    opacity: 0.3;
+}
+
+.unselected:hover {
+    opacity: 0.6;
+}
+
+.impact i {
+    margin-right: 3px;
+}
+
+.list-tooltip {
+    display: inline-block;
+    margin: 0;
+}
+
+.list-tooltip li {
+    background-color: white;
+    margin-bottom: 0em;
+    cursor: pointer;
+    padding: 2px 0px;
+}
+
+/* style the dropdown */
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(https://s3-eu-west-1.amazonaws.com/cbbranding/new+folder/arrow-for-map.png) 96% / 15% no-repeat #e7e7e7;
+    background-size: 20px 13px;
+    border:2px;
+    padding: 4px;
+    color: #333333;
+    outline:0px;
+}
+
+.selector {
+    width: 120px;
+    border-radius: 4px;
+}
+
+/* arrow toggle */
+
+#console-toggle {
+    right: 0px;
+    top: 0px;
+    padding: 10px;
+    position: absolute;
+    z-index: 99999999;
+    width: 12px;
+    height: 12px;
+    display: block;
+}
+
+.toggle {
+    color: #7e7e7e;
+    text-decoration: none;
+    text-align: right;
+}
+
+.toggle:hover {
+    color: #333333;
+    text-decoration: none;
+}
+
+.arrow-right-hidden {
+    display: none;
+}
+
+.arrow-left {
+    display: inline;
+}
+
+.arrow-left-hidden {
+    display: none;
+}
+
+.arrow-right {
+    display: inline;
+}
+
+.console-close {
+    transform: translateX(calc(-100% + 25px));
+    -ms-transform: translateX(calc(-100% + 25px));
+    -webkit-transform: translateX(calc(-100% + 25px));
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-property: transform;
+    -webkit-transition-property: transform;
+    -moz-transition-property: transform;
+}
+
+.console-open {
+    transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    transition-duration: 0.8s;
+    -webkit-transition-duration: 0.8s;
+    transition-property: transform;
+    -webkit-transition-property: transform;
+    -moz-transition-property: transform;
+}
+
+/* style logo */
+
+#logo {
+    position: absolute;
+    bottom: 18px;
+    right: 3px;
+    z-index: 9000;
+    height: 45px;
+    width: 110px;
+    background-image:url(../img/logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    visibility: visible;
+    opacity: 0.5;
+}

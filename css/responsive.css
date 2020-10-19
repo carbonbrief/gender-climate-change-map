@@ -1,0 +1,92 @@
+@media all and (max-width: 767px) {
+
+    #logo {
+        height: 25px;
+        width: 25px;
+        bottom: 7px;
+        right: 38px;
+        background-image:url(../img/logo-mobile.svg);
+    }
+
+    .last {
+        display: none;
+    }
+
+    #console {
+        display:none;
+    }
+
+    #map {
+        display:none;
+    }
+
+    #map-graphic{
+        visibility: visible;
+    background-image: url(https://www.carbonbrief.org/wp-content/uploads/2020/04/Screenshot-2020-04-09-at-15.55.21.png);
+    background-size: cover;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+    h3#mobile-message{
+        visibility: visible;
+        font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.1;
+    color: #333333;
+    bottom: 10px;
+    position: absolute;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    background-color: white;
+    padding: 10px;
+    }
+
+}
+
+/*@media all and (max-width: 570px) {
+
+    #console {
+        width: 280px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    .subtitle {
+        display: none;
+    }
+
+    #map {
+        height: 500px;
+    }
+
+    .mapboxgl-popup {
+        max-width: 280px;
+    }
+
+    .summary {
+        font-size: 12px;
+    }
+
+    .citation {
+        font-size: 11px;
+    }
+
+}
+
+@media all and (max-width: 414px) {
+
+    #console {
+        display: none;
+    }
+
+    #map {
+        height: 400px;
+    }
+
+}*/
