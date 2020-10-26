@@ -9,7 +9,7 @@ if (!mapboxgl.supported()) {
         // style: 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',
         style: 'mapbox://styles/rospearce/cjskgftrp4a9f1fpfbbgkmtlq',
         center: [8, 20],
-        zoom: 1.5,
+        zoom: 2,
         maxZoom: 12
     });
 }
@@ -54,11 +54,12 @@ var bounds = getBounds();
 map.fitBounds(bounds, {padding: 10});
 
 var icons = {
-    "Death and injury from extreme weather": "fas fa-bolt",
+    "Death and injury from extreme weather": "fas fa-wind",
     "Food insecurity": "fas fa-utensils",
-    "Infectious disease": "fas fa-plus-circle",
+    "Infectious disease": "fas fa-bug",
     "Mental illness": "fas fa-user-md",
-    "Poor reproductive and maternal health": "fas fa-child",
+    //"Poor reproductive and maternal health": "fas fa-baby-carriage",
+    "Poor reproductive and maternal health": "fas fa-baby-carriage",
 };
 
 var typeTags = {
@@ -70,17 +71,24 @@ var typeTags = {
 };
 
 var impactTags = {
-    "Female": "female",
     "Male": "male",
+    "Female": "female",
     "No difference": "nodifference",
 }
 
 var popupIcon = {
-    "Death and injury from extreme weather": "<i class='fas fa-bolt'></i>",
+    "Death and injury from extreme weather": "<img class='popup-icon' src='img/extreme-dark.svg'></img>",
     "Food insecurity": "<i class='fas fa-utensils'></i>",
-    "Infectious disease": "<i class='fas fa-plus-circle'></i>",
-    "Mental illness": "<i class='ffas fa-user-md'></i>",
-    "Poor reproductive and maternal health": "<i class='fas fa-child'></i>",
+    "Infectious disease": "<i class='fas fa-bug'></i>",
+    "Mental illness": "<img class='popup-icon' src='img/mental-dark.svg'></img>",
+    //"Poor reproductive and maternal health": "<i class='fas fa-baby-carriage'></i>",
+    "Poor reproductive and maternal health": "<img class='popup-icon' src='img/reproductive-dark.svg'></img>",
+}
+
+var genderIcon = {
+    "Male": "mm",
+    "Female": "fm",
+    "No difference": "ndm",
 }
 
 var colors = {
@@ -117,7 +125,7 @@ map.on('load', function() {
         // replace hash marks with smart quotes
         let summary = feature.properties['Blurb'];
         //summary = summary.substr(1, summary.length-2);
-        summary = "\u201c" + summary + "\u201d";
+        //summary = "\u201c" + summary + "\u201d";
 
         let url = feature.properties['URL'];
         let citation1 = feature.properties['Citation'];
@@ -132,7 +140,7 @@ map.on('load', function() {
         el.className = "marker" + " " + typeTag + " " + impactTag;
 
         // inner symbol
-        if (typeTag == "drought" || typeTag =="coral") {
+        if (typeTag == "drought" || typeTag =="coral" || typeTag == "mental" || typeTag == "extreme" || typeTag == "reproductive") {
             el.innerHTML = "<img class='marker-icon' src='img/" + typeTag + ".svg'></img>";
         } else {
             el.innerHTML = '<i class="' + symbol + '"></i>';
@@ -141,14 +149,13 @@ map.on('load', function() {
         // make a marker for each feature and add to the map
         new mapboxgl.Marker(el)
         .setLngLat(feature.geometry.coordinates)
-        .setPopup(new mapboxgl.Popup({ offset: 10, closeButton: false }) // add popups
-        .setHTML('<h3>' + feature.properties['Title'] + '</h3> <h4 style="padding-bottom: 4px; border-bottom: 2px solid ' + colors[impactTag] + ';">' + feature.properties['Location'] /*+ ", " + feature.properties['year']*/ + '</h4><ul class="list-group list-tooltip"><li>' 
-        + popupIcon[type] + " "  + type + '</li>' 
-        + '<li><div class="tooltip ' + impactTag + '" style="margin-right: 5px;"></div>' + impact + '</li></ul><p class="summary">' + summary + '</p><p class="citation"><a href="'
+        .setPopup(new mapboxgl.Popup({ offset: 10, closeButton: false, }) // add popups
+        .setHTML('<h3>' + feature.properties['Title'] + '</h3> <h4 style="padding-bottom: 4px; border-bottom: 2px solid ' + colors[impactTag] + ';">' + feature.properties['Location'] /*+ ", " + feature.properties['year']*/ + '</h4><ul class="list-group list-tooltip"><li> ' + popupIcon[type] + " " + feature.properties['Climate change impact'] 
+        + '</li><li><div style="display:inline-block" class="list-group list-tooltip"><li>Gender most affected: ' + feature.properties['Gender most affected'] + '</li></ul><p class="summary">' + summary + '</p><p class="citation">Source: <a href="'
         + url + '" target="_blank">' + citation1 + "</a>"))
         .addTo(map);
 
-        //console.log(el)
+        //console.log(el) 
 
     });
 
