@@ -43,27 +43,7 @@
                         </li>
                     </ul>
                 </div>
-                <!--<div class="session key">
-                    <h2>Type of study</h2>
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <input type="checkbox" name="formal" checked="checked" hidden>
-                            <div class="colour-key" style="background-color: #333333;"></div>
-                            Formal study
-                        </li>
-                        <li class="list-group-item">
-                            <input type="checkbox" name="rapid" checked="checked" hidden>
-                            <div class="rapid-key"></div>
-                            Rapid assessment
-                        </li>
-                        <li class="list-group-item" id="trend">
-                            <input type="checkbox" name="trend" checked="checked" hidden>
-                            <div class="trend-key"></div>
-                            <img class="key-icon" src="img/hexagon.svg">
-                            Trend
-                        </li>
-                    </ul>
-                </div>-->
+               
                 <script></script>
                 <div class="session impact">
                     <div class="impacts">
@@ -100,42 +80,182 @@
                         <button type="button" id="deselect">Deselect all</button>
                     </div>
                 </div>
-                <!--<div class="session last">
-                    <div class="row">
-                        <div class="column">
-                            <h2>Year</h2>
-                            <select id='selectorYear' class="selector">
-                                <option value='all' selected='selected'>All</option>
-                                <option value='2019' >2019</option>
-                                <option value='2018' >2018</option>
-                                <option value='2017' >2017</option>
-                                <option value='2016' >2016</option>
-                                <option value='2015' >2015</option>
-                                <option value='2014' >2014</option>
-                                <option value='2013' >2013</option>
-                                <option value='2012' >2012</option>
-                                <option value='2011' >2011</option>
-                                <option value='2010' >pre-2011</option>
-                            </select>
-                        </div>-->
+              
                         <div class="column">
                             <h2>Studies</h2>
-                            <p id="studies">131</p>
+                            <p id="studies">130</p>
                         </div>
                          <div>
                             <p>Data source: <a href="http://wedo.org/wp-content/uploads/2016/11/GGCA-RP-FINAL.pdf" target="_blank">Global Gender and Climate Alliance (2016)</a>. Additional analysis by Dr Sam Sellers for Carbon Brief.</p>
-                            <!-- <p id="studies">73 -->
+                        
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div id="map">
-             <!--<div 
-             id="globalcontainer">
-             <div id="gctitle"><h4>Global and regional studies</h4> </div>
-                </div>-->
+            <div 
+            id="globalcontainer">
+            <div id="gctitle"><h4>Global and regional studies</h4> </div>
+            <!-- global container markers manually entered here -->
+            <div class="popup" style="left:15px">
+               <i class=' fas fa-fire-alt' id=1 style="color: #c43e00;"></i>
+           <span class="popuptext" >
+               <h3 style="margin-top:0; margin-bottom:0.2em">Global study finding extreme weather events kill more women than men</h3>
+                <h4 style="font-size: 14px; margin: 5px 0px; padding-bottom: 4px; border-bottom: 2px solid; border-bottom-color:  #F4A466 ;">Global</h4>
+            
+                
+           <ul class="list-group list-tooltip">
+               <li><img class="popup-icon" src="img/extreme-dark.svg"> Death and injury from extreme weather</li>
+               <li>Gender most affected: Female</li>
+            </ul>
+            <p class="summary">A study of 141 countries over two decades finding women are more likely to be killed by extreme weather events than men.</p>
+            <p class="citation">Source: <a href="https://www.tandfonline.com/doi/full/10.1111/j.1467-8306.2007.00563.x" target="_blank">Neumayer & Plümper (2007)</a>
 
+           </span>
+               </div>
+
+               <div class="popup" style="left:65px" >
+               <i class=' fas fa-fire-alt' id=8 style="color:#c43e00;"></i>
+               <span class="popuptext" >
+                <h3 style="margin-top:0; margin-bottom:0.2em">Global study finding poorer women are most affected by extreme weather events</h3>
+                 <h4 style="font-size: 14px; margin: 5px 0px; padding-bottom: 4px; border-bottom: 2px solid; border-bottom-color:  #F4A466 ;">Global</h4>
+             
+                 
+            <ul class="list-group list-tooltip">
+                <li><img class="popup-icon" src="img/extreme-dark.svg"> Death and injury from extreme weather</li>
+                <li>Gender most affected: Female</li>
+             </ul>
+             <p class="summary">A study of 85 developing countries finding women are more likely to be affected by extreme weather in countries where their economic status is poorer.</p>
+             <p class="citation">Source: <a href="https://academic.oup.com/sf/article-abstract/95/1/355/2428761?redirectedFrom=fulltext" target="_blank">Austin & McKinney (2016)</a>
+ 
+            </span>
+               </div>
+
+               <div class="popup" style="left:115px">
+               <i class=' fas fa-fire-alt' id=16 style="color:#c43e00;"></i>
+               <span class="popuptext" >
+                <h3 style="margin-top:0; margin-bottom:0.2em">Study finding women in European cities are more likely to die during heatwaves than men</h3>
+                 <h4 style="font-size: 14px; margin: 5px 0px; padding-bottom: 4px; border-bottom: 2px solid; border-bottom-color:  #F4A466 ;">Europe</h4>
+             
+                 
+            <ul class="list-group list-tooltip">
+                <li><img class="popup-icon" src="img/extreme-dark.svg"> Death and injury from extreme weather</li>
+                <li>Gender most affected: Female</li>
+             </ul>
+             <p class="summary">A study of nine European cities, including London, Paris and Rome, finding that women are more likely to die during heatwaves than men.</p>
+             <p class="citation">Source: <a href="https://doi.org/10.1186/1476-069X-9-37" target="_blank">D'Ippoliti et al. (2010)</a>
+ 
+            </span>
+               </div>
+
+               <div class="popup" style="left:165px" >
+               <i class=' fas fa-fire-alt' id=18 style="color:#c43e00;"></i>
+               <span class="popuptext" >
+                <h3 style="margin-top:0; margin-bottom:0.2em">A study in Bangladesh and Ethiopia finding that girls and women were particularly at risk of death during disasters</h3>
+                 <h4 style="font-size: 14px; margin: 5px 0px; padding-bottom: 4px; border-bottom: 2px solid; border-bottom-color:  #F4A466 ;">Bangladesh/Ethiopia</h4>
+             
+                 
+            <ul class="list-group list-tooltip">
+                <li><img class="popup-icon" src="img/extreme-dark.svg"> Death and injury from extreme weather</li>
+                <li>Gender most affected: Female</li>
+             </ul>
+             <p class="summary">A study in Bangladesh and Ethiopia finding that "more girls and women are dying during disasters", as well as facing early and forced marriages, sexual violence and curtailment of education.</p>
+             <p class="citation">Source: <a href="https://plan-international.org/publications/weathering-storm" target="_blank">Swarup et al. (2011)</a>
+ 
+            </span>
+               </div>
+
+               <div class="popup" style="left:215px">
+               <i class=' fas fa-fire-alt' id=14 style="color:#c43e00;"></i>
+               <span class="popuptext" >
+                <h3 style="margin-top:0; margin-bottom:0.2em">Study of 19 African countries finding climate change is affecting newborn birth weight</h3>
+                 <h4 style="font-size: 14px; margin: 5px 0px; padding-bottom: 4px; border-bottom: 2px solid; border-bottom-color:  #F4A466 ;">Africa (19 countries)</h4>
+             
+                 
+            <ul class="list-group list-tooltip">
+                <li><img class="popup-icon" src="img/reproductive-dark.svg"> Poor reproductive and maternal health</li>
+                <li>Gender most affected: Female</li>
+             </ul>
+             <p class="summary">A study in 19 African countries from 1986-2010 finding changes to hot days and rainfall are associated with changes to birth weights for newborns.</p>
+             <p class="citation">Source: <a href="https://www.sciencedirect.com/science/article/abs/pii/S0959378015300066" target="_blank">Grace et al. (2015)</a>
+ 
+            </span>
+               </div>
+
+               <div class="popup" style="left:265px">
+               <i class=' fas fa-fire-alt' id=17 style="color:#c43e00;"></i>
+               <span class="popuptext" >
+                <h3 style="margin-top:0; margin-bottom:0.2em">Study finding men are more likely than women to die in floods in the US and Europe</h3>
+                 <h4 style="font-size: 14px; margin: 5px 0px; padding-bottom: 4px; border-bottom: 2px solid; border-bottom-color:  #9600BF ;">Europe/US</h4>
+             
+                 
+            <ul class="list-group list-tooltip">
+                <li><img class="popup-icon" src="img/extreme-dark.svg"> Death and injury from extreme weather</li>
+                <li>Gender most affected: Male</li>
+             </ul>
+             <p class="summary">A study of 13 floods across Europe and the US finding men are more likely to die in these events than women.</p>
+             <p class="citation">Source: <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.0361-3666.2005.00275.x" target="_blank">Jonkman & Kelman (2005)</a>
+ 
+            </span>
+               </div>
+
+       <div class="popup" style="left:315px">
+               <i class=' fas fa-fire-alt' id=2 style="color:#ff6f00;"></i>
+               <span class="popuptext" >
+                <h3 style="margin-top:0; margin-bottom:0.2em">Study finding men in southeast Asia are more affected by dengue fever</h3>
+                 <h4 style="font-size: 14px; margin: 5px 0px; padding-bottom: 4px; border-bottom: 2px solid; border-bottom-color:  #9600BF ;">Southeast Asia</h4>
+             
+                 
+            <ul class="list-group list-tooltip">
+                <li><i class="fas fa-bug" style="margin: 3px; font-size: 14px;"></i> Infectious disease</li>
+                <li>Gender most affected: Male</li>
+             </ul>
+             <p class="summary"><br>A study of six countries in Asia, including Sri Lanka, Laos and Singapore, finding 57-62% of dengue fever cases are male.</p>
+             <p class="citation">Source: <a href="https://pubmed.ncbi.nlm.nih.gov/23908884/" target="_blank">Anker & Arima (2011)</a>
+ 
+            </span>
+               </div>
+
+               <div class="popup" style="left:365px">
+               <i class=' fas fa-fire-alt' id=4 style="color:#ff6f00;"></i>
+               <span class="popuptext" >
+                <h3 style="margin-top:0; margin-bottom:0.2em">Study finding no gender difference in heat-related deaths in Latin America</h3>
+                 <h4 style="font-size: 14px; margin: 5px 0px; padding-bottom: 4px; border-bottom: 2px solid; border-bottom-color:  #9c9c9c ;">Latin America</h4>
+             
+                 
+            <ul class="list-group list-tooltip">
+                <li><img class="popup-icon" src="img/extreme-dark.svg"> Death and injury from extreme weather</li>
+                <li>Gender most affected: No difference</li>
+             </ul>
+             <p class="summary">A study in São Paulo, Brazil; Santiago, Chile; and Mexico City, Mexico finding no signficant difference in heatwave-related deaths between men and women.</p>
+             <p class="citation">Source: <a href="https://academic.oup.com/ije/article/37/4/796/736370" target="_blank">Bell et al. (2008)</a>
+ 
+            </span>
+               </div>
+
+               <div class="popup" style="left:415px" >
+               <i class=' fas fa-fire-alt' id=5 style="color:#ff6f00;"></i>
+               <span class="popuptext" >
+                <h3 style="margin-top:0; margin-bottom:0.2em">Study finding no gender difference in hunger after climate shocks in Kenya, Uganda and Tanzania</h3>
+                 <h4 style="font-size: 14px; margin: 5px 0px; padding-bottom: 4px; border-bottom: 2px solid; border-bottom-color:  #9c9c9c ;">Kenya/Uganda/Tanzania</h4>
+             
+                 
+            <ul class="list-group list-tooltip">
+                <li><i class="fas fa-utensils" style="margin: 3px; font-size: 14px;"> </i> Food insecurity</li>
+                <li>Gender most affected: No difference</li>
+             </ul>
+             <p class="summary">A study finding women were no likelthan men to reduce their food intake following climate shocks across 600 households in Kenya, Uganda and Tanzania.</p>
+             <p class="citation">Source: <a href="https://agricultureandfoodsecurity.biomedcentral.com/articles/10.1186/s40066-015-0042-4" target="_blank">Silvestri et al. (2015)</a>
+ 
+            </span>
+               </div>
+
+
+
+
+
+           </div>
 
             <div id="logo"></div>
         </div>
@@ -144,5 +264,17 @@
         <script src="data/studiesTest.js"></script>
         <!-- <script src="js/config.js"></script> -->
         <script src="js/script.js"></script>
+        <script>const popups = [...document.getElementsByClassName('popup')];
+
+            window.addEventListener('click', ({ target }) => {
+              const popup = target.closest('.popup');
+              const clickedOnClosedPopup = popup && !popup.classList.contains('show');
+              
+              popups.forEach(p => p.classList.remove('show'));
+              
+              if (clickedOnClosedPopup) popup.classList.add('show');  
+              
+            });
+            </script>
     </body>
 </html>

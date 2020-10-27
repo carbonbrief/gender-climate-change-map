@@ -97,6 +97,11 @@ var colors = {
     "nodifference": "#999999"
 }
 
+var globalContainer ={
+    "True": "global",
+    "False": "located"
+}
+
 map.addControl(new mapboxgl.NavigationControl());
 
 map.on('load', function() {
@@ -121,7 +126,8 @@ map.on('load', function() {
         //let studyType = studyTypes[sType];
         //let tooltipStudy = feature.properties['studyType'];
         //let ttStudy = tooltipStudyTypes[tooltipStudy];
-
+        let container = feature.properties['Container'];
+        let globalMarker = globalContainer[container];
         // replace hash marks with smart quotes
         let summary = feature.properties['Blurb'];
         //summary = summary.substr(1, summary.length-2);
@@ -140,12 +146,12 @@ map.on('load', function() {
         el.className = "marker" + " " + typeTag + " " + impactTag;
 
         // inner symbol
-        if (typeTag == "drought" || typeTag =="coral" || typeTag == "mental" || typeTag == "extreme" || typeTag == "reproductive") {
+        if (typeTag == "mental" || typeTag == "extreme" || typeTag == "reproductive") {
             el.innerHTML = "<img class='marker-icon' src='img/" + typeTag + ".svg'></img>";
         } else {
             el.innerHTML = '<i class="' + symbol + '"></i>';
         }
-
+        if (feature.properties['Container'] !== 'True') {
         // make a marker for each feature and add to the map
         new mapboxgl.Marker(el)
         .setLngLat(feature.geometry.coordinates)
@@ -154,7 +160,23 @@ map.on('load', function() {
         + '</li><li><div style="display:inline-block" class="list-group list-tooltip"><li>Gender most affected: ' + feature.properties['Gender most affected'] + '</li></ul><p class="summary">' + summary + '</p><p class="citation">Source: <a href="'
         + url + '" target="_blank">' + citation1 + "</a>"))
         .addTo(map);
+        }
 
+        else if (feature.properties['Container'] == 'True') {
+
+            var elc = document.createElement('div');
+                elc.className = "marker" + " " + typeTag + " " + impactTag + " " + globalMarker;
+                if (typeTag == "mental" || typeTag == "extreme" || typeTag == "reproductive") {
+                    elc.innerHTML = "<img class='marker-icon' src='img/" + typeTag + ".svg'></img>";
+                } else {
+                    elc.innerHTML = '<i class="' + symbol + '"></i>';
+                }
+                console.log(elc)
+                
+                document.getElementById('globalcontainer').appendChild(elc);
+                // document.getElementsByClassName('global').append('popup');
+
+        }
         //console.log(el) 
 
     });
@@ -301,6 +323,7 @@ $(".toggle").click(function() {
     $('.arrow-right-hidden').toggleClass('arrow-right');
     $('.arrow-left').toggleClass('arrow-left-hidden');
 });
+
 
 
 

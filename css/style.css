@@ -378,7 +378,7 @@ h3#mobile-message{
     left: 0;
     right: 0;
     top: 700px;
-    width: 550px;
+    width: 450px;
     height: 2.5%;
     border: 1px solid white;
     padding: 15px 15px;
@@ -719,4 +719,138 @@ select {
     background-repeat: no-repeat;
     visibility: visible;
     opacity: 0.5;
+}
+
+.popup {
+    display: flex;
+    align-items: start;
+    /* padding-right: 5px; */
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index:25;
+  width: 50px;
+    position: absolute;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    font-family: 'PT Sans', sans-serif;
+  visibility: hidden;
+  width: 300px; 
+  background-color: #ffffff;
+  color: #333333;
+  text-align: left;
+  border-radius: 3px;
+  padding: 15px;
+  position: absolute;
+  z-index: 99999;
+  bottom: 125%;
+  left: 100%;
+  margin-left: -175px;
+  margin-bottom: 30px;
+z-index:26;
+}
+
+/* .popup .popuptext i{
+    font-family: 'PT Sans', sans-serif;
+  color: #333333;
+  text-align: left;
+
+} */
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: white;
+  z-index:26;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup.show .popuptext {
+  visibility: visible;
+
+}
+
+.popup .hide {
+  visibility: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+#overlay {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  z-index: 40;
+}
+
+h4 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 5px 0px;
+}
+
+.invisibleDiv {
+    height: 100%;
+    width: 100%;
+    color: "black";
+    z-index: 10000000;
+    visibility: hidden;
+    margin-right: 5px;
+    display: flex;
+    align-items: start;
+    position: fixed;
+}
+
+invisibleDiv {
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: ' ';
+    background: rgba(0,0,0,.5);
+        z-index: 10000000;
+
+}
+
+i.fas.fa-fire-alt{
+    z-index:100000; position:absolute;top:3px
+}
+
+.fa-fire-alt:before{
+    margin-left:15px;
+    font-size:2em;
+    visibility: hidden;
+}
+
+.global{
+    margin-left:10px;
+    margin-right:10px
 }
