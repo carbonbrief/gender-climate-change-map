@@ -157,7 +157,7 @@ map.on('load', function() {
         .setLngLat(feature.geometry.coordinates)
         .setPopup(new mapboxgl.Popup({ offset: 10, closeButton: false, }) // add popups
         .setHTML('<h3>' + feature.properties['Title'] + '</h3> <h4 style="padding-bottom: 4px; border-bottom: 2px solid ' + colors[impactTag] + ';">' + feature.properties['Location'] /*+ ", " + feature.properties['year']*/ + '</h4><ul class="list-group list-tooltip"><li> ' + popupIcon[type] + " " + feature.properties['Climate change impact'] 
-        + '</li><li><div style="display:inline-block" class="list-group list-tooltip"><li>Gender most affected: ' + feature.properties['Gender most affected'] + '</li></ul><p class="summary">' + summary + '</p><p class="citation">Source: <a href="'
+        + '</li><li><div style="display:inline-block" class="list-group list-tooltip">Gender most affected: ' + feature.properties['Gender most affected'] + '</li><li></li></ul><p class="summary">' + summary + '</p><p class="citation">Source: <a href="'
         + url + '" target="_blank">' + citation1 + "</a>"))
         .addTo(map);
         }
