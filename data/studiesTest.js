@@ -430,7 +430,7 @@ var geojson = {
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -90.094082,30.012488 ]
+      "coordinates":  [ -90.09767,30.052488 ]
    },
    "properties": {
    "Title":"Study finding no gender difference in deaths during Hurricane Katrina in Louisiana",
@@ -447,7 +447,7 @@ var geojson = {
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -90.050137,30.012488 ]
+      "coordinates":  [ -90.050767,30.052488 ]
    },
    "properties": {
    "Title":"Study finding no gender difference in deaths from flooding following Hurricane Katrina",
@@ -600,7 +600,7 @@ var geojson = {
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -89.80767,30.012488 ]
+      "coordinates":  [ -89.80767,30.052488 ]
    },
    "properties": {
    "Title":"A study finding vulnerable women were more at risk of sexual assault after Hurricane Katrina",
@@ -634,7 +634,7 @@ var geojson = {
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -89.75767,30.012488 ]
+      "coordinates":  [ -89.75767,30.052488 ]
    },
    "properties": {
    "Title":"A study finding intimate partner violence risk increased for women after Hurricane Katrina",
@@ -668,7 +668,7 @@ var geojson = {
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -89.70767,30.012488 ]
+      "coordinates":  [ -89.70767,30.052488 ]
    },
    "properties": {
    "Title":"A study finding new mothers reported higher levels of violence from their partners after Hurricane Katrina",
@@ -1331,7 +1331,7 @@ var geojson = {
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -90.000137,30.012488 ]
+      "coordinates":  [ -90.00767,30.052488 ]
    },
    "properties": {
    "Title":"Study finding many US male fighters suffered from skin rashes after Hurricane Katrina",
@@ -1348,7 +1348,7 @@ var geojson = {
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -89.945767,30.012488 ]
+      "coordinates":  [ -89.95767,30.052488 ]
    },
    "properties": {
    "Title":"Study finding many construction workers caught skin rashes after Hurricane Katrina",
@@ -1450,7 +1450,7 @@ var geojson = {
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -89.95767,30.012488 ]
+      "coordinates":  [ -89.65767,30.052488 ]
    },
    "properties": {
    "Title":"Study finding women were four times as likely to suffer stress after Hurricane Katrina",
@@ -1875,7 +1875,7 @@ var geojson = {
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -89.90767,30.012488 ]
+      "coordinates":  [ -89.90767,30.052488 ]
    },
    "properties": {
    "Title":"Study finding women struggled to access reproductive healthcare after Hurricane Katrina",
@@ -2062,7 +2062,7 @@ var geojson = {
    "type": "Feature",
    "geometry": {
       "type": "Point",
-      "coordinates":  [ -89.85767,30.012488 ]
+      "coordinates":  [ -89.85767,30.052488 ]
    },
    "properties": {
    "Title":"Study finding women exposed to Hurricane Katrina more likely to have smaller newborns",
